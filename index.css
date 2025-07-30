@@ -14,6 +14,13 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.lamp{
+    width: 40px;
+    rotate: 180deg;
+    position: absolute;
+    top: -5%;
+}
+
 .navigation-bar {
     display: flex;
     align-items: center;
@@ -25,12 +32,20 @@ body {
 
 .document-icon {
     width: 30px;
-    filter: invert(1) contrast(1);
-    background-color: #ffdd92;
+    filter: invert(1) contrast(1) hue-rotate(420deg);
+    ;
+}
+
+.earth-icon:hover {
+    cursor: pointer;
+    transform: scale(1.5);
 }
 
 .navigation-bar.shrunk {
     height: 35px;
+}
+.lamp.shrunk{
+    top: -25%;
 }
 
 .navigation-bar ul {
@@ -54,15 +69,17 @@ body {
     /* 150% */
     letter-spacing: 0.5px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .navigation-bar ul li a:hover {
-    color: #ddd;
+    color: #ffdd92;
     /* Hover effect */
 }
 
 .button-get-started-text {
-    color: #FFF;
+    color: black;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
@@ -78,10 +95,14 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 50px;
-    border: 1px solid #31BACE;
-    background: #31BACE;
+    border-radius: 20px;
+    border: 1px solid #ffdd92;
+    background: #ffdd92;
     text-decoration: none;
+}
+
+.button-get-started:hover{
+    background-color: #76684a;
 }
 
 .hamburger {
@@ -258,9 +279,8 @@ body {
 .vision {
     display: flex;
     opacity: 0;
-    /* position: relative;
-    height: 400px;
-    width: 300px; */
+    height: 500px;
+    width: 600px;
     transform: translateX(-100px);
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -313,14 +333,22 @@ body {
     right: 0%;
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
 
     .mission-vision {
         flex-direction: column;
     }
 
-    .mission,
+    .mission {
+        width: 100%;
+    }
+
     .vision {
+        width: 100%;
+        height: 80%;
+    }
+
+    .vision img {
         width: 100%;
     }
 
@@ -337,6 +365,7 @@ body {
 
     }
 }
+
 
 .ourProduct {
     width: 84%;
@@ -1218,7 +1247,7 @@ body {
 .footer {
     height: 256px;
     width: 100%;
-    background-color: #F6F6F6;
+    background-color: rgb(63, 63, 63);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1242,7 +1271,7 @@ body {
 }
 
 .footer-nav-bar a {
-    color: #020D0E;
+    color: white;
     text-align: center;
     font-family: Poppins;
     font-size: 16px;
@@ -1255,7 +1284,7 @@ body {
 }
 
 .footer-nav-bar a:hover {
-    color: #31BACE;
+    color: #ffdd92;
 }
 
 .social-media-nav {
@@ -1264,8 +1293,15 @@ body {
     gap: 20px;
 }
 
-.social-media-nav a:hover svg path {
+.email-logo:hover svg path {
     fill: #31BACE;
+}
+
+.whatsapp-logo:hover svg path{
+    fill: rgb(116, 217, 116);
+}
+.linkedin-logo:hover svg path{
+    fill: rgb(0, 86, 216)
 }
 
 .footer-note {
