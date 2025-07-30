@@ -13,15 +13,17 @@
 <body>
     <div class="sticky-header">
         <nav class="navigation-bar">
-            <a class="personal-portfolio-text" href="index.html" style="text-decoration: none; color: #ffdd92; font-size: 20px; font-weight: 900;">Portfolio</a>
+            <div style="display: flex; justify-content: center;">
+                <img src="images\document.gif" alt="document" class="document-icon">
+                <a class="personal-portfolio-text" href="index.html"
+                    style="text-decoration: none; color: #ffdd92; font-size: 20px; font-weight: 900;">Portfolio</a>
+            </div>
             <button class="hamburger">☰</button>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="PHealth.html">PHealth</a></li>
-                <li><a href="PetLost.html">Pet Lost</a></li>
-                <!-- <li><a href="Adoption.html">Adoption</a></li> -->
-                <li><a href="https://adoption.petpetclub.com.hk/?page=1">Adoption</a></li>
-                <li><a href="news_events.html">News & Events</a></li>
+                <li><a href="PHealth.html">Journey</a></li>
+                <li><a href="news_events.html">Experience</a></li>
+                <li><a href="PetLost.html">Contact</a></li>
                 <div class="earth-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path
@@ -42,28 +44,32 @@
     </div>
     <section class="background-section">
         <div class="content">
-            <h1>Hi, I am S M Atiquzzaman Anaf</h1>
-            <p>Simplifying pet care to reduce costs and enhance the bond for happier, healthier lives.</p>
-        </div>
-        <div class="container-for-women-dog">
-            <img class="img-women-dog" src="images\women-with-dog.png" alt="women-with-dog">
-        </div>
-        <div class="unionContainer">
-            <img src="images\Union.png" alt="union">
+            <h1>Hello, <br> I am S M Atiquzzaman Anaf</h1>
+            <p>Nice to meet you. I am glad to share my portfolio with you.</p>
         </div>
     </section>
     <div class="mission-vision">
         <div class="mission">
             <div class="mission-text-container">
-                <h1>Mission</h1>
-                <p>Empowering pet owners with innovative solutions for simpler care and happier lives</p>
+                <h1>About Me</h1>
+                <p>I am S M Atiquzzaman Anaf, a third-year Computer Science student at the City University of Hong Kong.
+                    Besides majoring in CS, I am minoring in Finance too. Passionate about programming and software
+                    development, I am dedicated to making a meaningful impact in the tech industry. I thrive on the
+                    challenges presented by complex problems and innovative solutions. My experience in various student
+                    helper jobs, from being a Teaching Assistant to working as an intern in multiple companies, has
+                    allowed me to build strong skills in programming, which I apply to real-world projects.
+                    <br><br>
+                    With a love for software/mobile app development, I am eager to contribute my knowledge to
+                    cutting-edge solutions. My leadership experience as captain of my high school's football team and my
+                    knack for collaborating with various people at work have enhanced my teamwork and communication
+                    skills. I am always seeking new opportunities to grow and make a difference, driven by a relentless
+                    passion for learning and innovation in the exciting world of software engineering.</p>
             </div>
         </div>
         <div class="vision">
-            <div class="vision-text-container">
-                <h1>Vision</h1>
-                <p>A future where every pet enjoys a joyful and healthy life through meaningful connections</p>
-            </div>
+            <!-- <div class="vision-img-container-1"></div> -->
+            <img src="images\anaf-img-3.jpg" alt="anaf-img">
+            <!-- <div class="vision-img-container-2"></div> -->
         </div>
     </div>
     <div class="ourProduct">
@@ -609,7 +615,7 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 images.forEach(img => img.classList.add('animate'));
-                observer.unobserve(container); 
+                observer.unobserve(container);
             }
         });
     }, {
