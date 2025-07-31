@@ -167,6 +167,7 @@ body {
     align-items: center;
     align-self: stretch;
     position: relative;
+    background-color: #060625;
 }
 
 .news-events-inside-frame-1 {

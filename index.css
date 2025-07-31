@@ -281,6 +281,7 @@ body {
     opacity: 0;
     height: 500px;
     width: 600px;
+    align-self: center;
     transform: translateX(-100px);
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -362,7 +363,6 @@ body {
         font-size: 13px;
         font-weight: 300;
         width: 100%;
-
     }
 }
 
@@ -539,6 +539,7 @@ body {
     justify-content: center;
     align-items: center;
     align-self: stretch;
+    background-color: #060625;
 }
 
 .news-events-inside-frame-1 {
@@ -552,6 +553,7 @@ body {
 .news-events-inside-frame-1-1 {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 .news-events-inside-frame-1-2 {
@@ -560,7 +562,7 @@ body {
 }
 
 .news-events-inside-frame-1-2 a {
-    color: #486284;
+    color: #ffdd92;
     text-align: right;
     font-family: Poppins;
     font-size: 12px;
@@ -576,13 +578,13 @@ body {
 }
 
 .news-events-inside-frame-1-2 a:hover {
-    color: #000000;
+    color: white;
 }
 
 
 .news-events-heading {
     width: 30%;
-    color: #020D0E;
+    color: #ffdd92;
     font-size: clamp(25px, 4vw, 61px);
     font-style: normal;
     font-weight: 600;
@@ -616,7 +618,7 @@ body {
 }
 
 .new-features-container:hover {
-    background-color: #F6F6F6;
+    background-color: rgb(69, 77, 89);
     cursor: pointer;
 }
 
@@ -632,46 +634,20 @@ body {
     width: 210px;
 }
 
-.date-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 110px;
-}
-
-.time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.date-inside-text {
-    color: #C0C0C0;
-
-    /* Remark */
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 120%;
-    /* 14.4px */
-}
-
 .news-icon {
     display: flex;
     height: 27.907px;
+    width: 134px;
     padding: 0.698px 23.023px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 34.884px;
-    border: 0.698px solid #020D0E;
+    border: 0.698px solid #ffdd92;
 }
 
 .news-icon-text {
-    color: #020D0E;
+    color: #ffdd92;
     text-align: center;
 
     /* Remark */
@@ -698,7 +674,7 @@ body {
 }
 
 .heading-texts {
-    color: #486284;
+    color: #695833;
 
     /* H5 */
     font-family: Poppins;
@@ -733,7 +709,7 @@ body {
 
 .features-description {
     align-self: stretch;
-    color: #8CA2C0;
+    color: wheat;
 
     /* Body2 */
     font-family: Poppins;
@@ -752,9 +728,6 @@ body {
 }
 
 @media screen and (max-width: 1050px) {
-    .news-events-inside-frame-1-1 {
-        flex-direction: column;
-    }
 
     .news-events-heading {
         width: 100%;
@@ -779,6 +752,11 @@ body {
     .features-description {
         font-size: 12px;
     }
+    .news-icon {
+        height: 20px;
+        width: auto;
+        padding: 5px 20px;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -793,11 +771,6 @@ body {
 
     .features-description {
         font-size: 8px;
-    }
-
-    .news-icon {
-        height: 20px;
-        padding: 0.698px 20px;
     }
 
     .time {
@@ -1116,10 +1089,11 @@ body {
     align-items: flex-start;
     gap: 99px;
     align-self: stretch;
+    background: linear-gradient(to bottom, #060625, rgb(63, 63, 63));
 }
 
 .backers-heading {
-    color: #020D0E;
+    color: #ffdd92;
 
     /* H1 */
     font-family: Poppins;
@@ -1128,6 +1102,14 @@ body {
     font-weight: 600;
     line-height: 120%;
     /* 73.2px */
+}
+
+.dalantia{
+    text-align: center;
+    color: #05006b;
+    font-size: 15px;
+    font-weight: 900;
+    font-family: Poppins;
 }
 
 .backers-icons-container-1 {
@@ -1151,7 +1133,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
 }
 
 .backers-icons-container-1-2 img {
@@ -1204,10 +1185,6 @@ body {
     .backers-icons-container-1 {
         gap: 40px;
     }
-
-    .backers-icons-container-1-2 {
-        gap: 50px;
-    }
 }
 
 @media screen and (max-width: 800px) {
@@ -1235,7 +1212,6 @@ body {
 @media screen and (max-width: 400px) {
     .backers-icons-container-1-2 {
         transform: scale(0.6);
-        gap: 100px;
     }
 
     .backers-icons-container-1 {
