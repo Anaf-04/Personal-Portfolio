@@ -261,16 +261,17 @@ body {
 }
 
 .mission-vision {
-    width: 84%;
+    width: 92%;
     background-color: #ffdd92;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    padding: 4% 8%;
+    padding-left: 8%;
 }
 
 .mission {
     display: flex;
+    align-items: center;
     opacity: 0;
     transform: translateX(100px);
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -279,7 +280,6 @@ body {
 .vision {
     display: flex;
     opacity: 0;
-    height: 500px;
     width: 600px;
     align-self: center;
     transform: translateX(-100px);
@@ -287,8 +287,17 @@ body {
 }
 
 .vision img {
-    border-radius: 20px;
-    border: 5px solid black;
+    height: auto;
+    max-height: 100%; /* Fit within vision div */
+    display: block;
+    clip-path: polygon(
+        5% 0%,    /* Top: slight indent */
+        15% 25%,  /* Curve outward */
+        15% 75%,  /* Curve outward */
+        5% 100%,  /* Bottom: slight indent */
+        100% 100%, /* Right side: straight */
+        100% 0%    /* Right side: straight */
+    );
 }
 
 .mission.visible,
@@ -305,39 +314,20 @@ body {
 .mission-text-container h1,
 .vision-text-container h1 {
     font-size: clamp(25px, 4vw, 61px);
-    margin: 2% 0;
+    margin: 0;
 }
 
 .mission-text-container p,
 .vision-text-container p {
-    width: 70%;
+    width: 100%;
 }
-
-/* .vision-img-container-1 {
-    border-top: 10px solid black;
-    border-left: 10px solid black;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.vision-img-container-2 {
-    border-bottom: 10px solid black;
-    border-right: 10px solid black;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    bottom: 0;
-    right: 0%;
-} */
 
 @media screen and (max-width: 1200px) {
 
     .mission-vision {
         flex-direction: column;
+        padding-right: 8%;
+        width: 84%;
     }
 
     .mission {
@@ -347,10 +337,13 @@ body {
     .vision {
         width: 100%;
         height: 80%;
+        padding: 4%;
     }
 
     .vision img {
         width: 100%;
+        clip-path: none;
+        border-radius: 20px;
     }
 
     .mission-text-container h1,
@@ -1089,7 +1082,7 @@ body {
     align-items: flex-start;
     gap: 99px;
     align-self: stretch;
-    background: linear-gradient(to bottom, #060625, rgb(63, 63, 63));
+    background: linear-gradient(to bottom, #060625,  rgb(46, 46, 46));
 }
 
 .backers-heading {
@@ -1223,7 +1216,8 @@ body {
 .footer {
     height: 256px;
     width: 100%;
-    background-color: rgb(63, 63, 63);
+    /* background-color: rgb(46, 46, 46); */
+    background-color: #ffdd92;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1247,7 +1241,7 @@ body {
 }
 
 .footer-nav-bar a {
-    color: white;
+    color: black;
     text-align: center;
     font-family: Poppins;
     font-size: 16px;
@@ -1260,7 +1254,7 @@ body {
 }
 
 .footer-nav-bar a:hover {
-    color: #ffdd92;
+    color: red;
 }
 
 .social-media-nav {
@@ -1282,7 +1276,7 @@ body {
 
 .footer-note {
     align-self: stretch;
-    color: #C0C0C0;
+    color: rgb(37, 37, 37);
     text-align: center;
     font-family: Poppins;
     font-size: 12px;

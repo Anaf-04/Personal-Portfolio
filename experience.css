@@ -162,11 +162,11 @@ body {
 
 .news-events {
     display: flex;
-    padding: 4% 8%;
+    /* padding: 100px 118px; */
+    padding: 130px 8%;
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    position: relative;
     background-color: #060625;
 }
 
@@ -181,6 +181,7 @@ body {
 .news-events-inside-frame-1-1 {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 }
 
 .news-events-inside-frame-1-2 {
@@ -188,180 +189,42 @@ body {
     justify-content: right;
 }
 
-.pages-nav-container {
-    display: flex;
-    gap: 5px;
-}
-
-.previous-page-container,
-.next-page-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7.5px 7.495px 7.495px 7.5px;
-    border-radius: 4.686px;
-    border: 0.937px solid #E6E6E6;
-}
-
-.previous-page-container:hover,
-.next-page-container:hover,
-.dropdown-icon:hover {
-    background-color: #969696;
-    cursor: pointer;
-}
-
-.previous-page-container:active,
-.next-page-container:active,
-.dropdown-icon:active {
-    background-color: #363636;
-}
-
-
-.current-page-display-container {
-    display: flex;
-    padding: 4px 7.501px 3.865px 21.555px;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 8.992px;
-    border-radius: 4.686px;
-    border: 0.937px solid #E6E6E6;
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    flex-direction: column;
-    width: 66px;
-    justify-content: center;
-    align-items: center;
-    border: 0px solid #E6E6E6;
-    position: absolute;
-    top: 90%;
-    left: 0;
-    background-color: white;
-}
-
-.page-1, .page-2, .page-3{
-    display: flex;
-    gap: 15px;
-    justify-content: flex-start;
-    align-items: center;
-    border: 0.937px solid #E6E6E6;
-    width: 100%;
-}
-
-.page-1 div, .page-2 div, .page-3 div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-}
-
-.page-2 svg, .page-3 svg{
-    display: none;
-}
-
-
-.page-1:hover, .page-2:hover, .page-3:hover{
-    background-color: #B7B7B7;
-    cursor: pointer;
-}
-
-.current-page-number {
-    color: #050505;
+.news-events-inside-frame-1-2 a {
+    color: #ffdd92;
+    text-align: right;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 15px;
+    font-weight: 300;
+    line-height: 120%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
 }
 
-.number-of-pages-display-container {
-    color: var(--400, #A3A3A3);
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
-    align-items: center;
-
+.news-events-inside-frame-1-2 a:hover {
+    color: white;
 }
-
 
 
 .news-events-heading {
     width: 30%;
-    color: #020D0E;
+    color: #ffdd92;
     font-size: clamp(25px, 4vw, 61px);
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
 }
 
-.news-events-heading svg {
-    width: clamp(20px, 4vw, 32px);
-    animation: rotate 0.5s linear forwards;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .new-features {
     display: flex;
+    /* width: 903px; */
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-}
-
-.news-events-subheading {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.news-events-subheading .news-icon:hover:not(.selected) {
-    background-color: #969696;
-    cursor: pointer;
-}
-
-.news-events-subheading .news-icon.selected {
-    background-color: #363636;
-}
-
-.news-icon.selected .news-icon-text {
-    color: #F6F6F6;
-}
-
-.news-events-subheading .news-icon:active {
-    background-color: #363636;
-}
-
-.new-features-page-1,
-.new-features-page-2,
-.new-features-page-3 {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.new-features-page-1 {
-    display: flex;
-}
-
-.new-features-page-2, .new-features-page-3 {
-    display: none;
 }
 
 .new-features-container {
@@ -377,25 +240,18 @@ body {
     border-radius: 20px;
 }
 
-.new-features-container.hidden {
-    display: none;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: transform 1s ease, opacity 1s ease;
+.new-features-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .new-features-container:hover {
-    background-color: #F6F6F6;
+    background-color: rgb(69, 77, 89);
     cursor: pointer;
 }
 
 .new-features-container:active {
     background-color: #969696;
-}
-
-.new-features-container.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 
@@ -406,46 +262,20 @@ body {
     width: 210px;
 }
 
-.date-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 110px;
-}
-
-.time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.date-inside-text {
-    color: #C0C0C0;
-
-    /* Remark */
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 120%;
-    /* 14.4px */
-}
-
 .news-icon {
     display: flex;
     height: 27.907px;
+    width: 134px;
     padding: 0.698px 23.023px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 34.884px;
-    border: 0.698px solid #020D0E;
+    border: 0.698px solid #ffdd92;
 }
 
 .news-icon-text {
-    color: #020D0E;
+    color: #ffdd92;
     text-align: center;
 
     /* Remark */
@@ -472,12 +302,15 @@ body {
 }
 
 .heading-texts {
-    color: #486284;
+    color: #695833;
+
+    /* H5 */
     font-family: Poppins;
     font-size: 21px;
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    /* 25.2px */
 }
 
 .features-icon {
@@ -504,31 +337,25 @@ body {
 
 .features-description {
     align-self: stretch;
-    color: #8CA2C0;
+    color: wheat;
+
+    /* Body2 */
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+    /* 19.2px */
 }
-
 
 @media screen and (max-width: 1400px) {
     .news-date-text {
         flex-direction: column;
         gap: 10px;
     }
-
-    .new-features-container{
-        gap: 0px;
-    }    
 }
 
 @media screen and (max-width: 1050px) {
-    .news-events-inside-frame-1-1 {
-        flex-direction: column;
-        gap: 20px;
-    }
 
     .news-events-heading {
         width: 100%;
@@ -553,14 +380,14 @@ body {
     .features-description {
         font-size: 12px;
     }
-
+    .news-icon {
+        height: 20px;
+        width: auto;
+        padding: 5px 20px;
+    }
 }
 
 @media screen and (max-width: 460px) {
-    .new-features-container {
-        height: 60px;
-    }
-
     .date-inside-text {
         font-size: 10px;
     }
@@ -572,11 +399,6 @@ body {
 
     .features-description {
         font-size: 8px;
-    }
-
-    .news-icon {
-        height: 20px;
-        padding: 0.698px 20px;
     }
 
     .time {
@@ -597,11 +419,6 @@ body {
         width: 50%;
         height: 50%;
     }
-
-    .large-shape {
-        bottom: -50%;
-        left: -50%;
-    }
 }
 
 @media screen and (max-width: 400px) {
@@ -617,7 +434,8 @@ body {
 .footer {
     height: 256px;
     width: 100%;
-    background-color: rgb(63, 63, 63);
+    /* background-color: rgb(46, 46, 46); */
+    background-color: #ffdd92;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -641,7 +459,7 @@ body {
 }
 
 .footer-nav-bar a {
-    color: white;
+    color: black;
     text-align: center;
     font-family: Poppins;
     font-size: 16px;
@@ -654,7 +472,7 @@ body {
 }
 
 .footer-nav-bar a:hover {
-    color: #ffdd92;
+    color: red;
 }
 
 .social-media-nav {
@@ -676,7 +494,7 @@ body {
 
 .footer-note {
     align-self: stretch;
-    color: #C0C0C0;
+    color: rgb(37, 37, 37);
     text-align: center;
     font-family: Poppins;
     font-size: 12px;

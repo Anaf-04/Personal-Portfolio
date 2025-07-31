@@ -145,7 +145,8 @@ body {
     }
 
     .button-get-started,
-    .earth-icon {
+    .earth-icon,
+    .lamp{
         display: none;
     }
 
@@ -168,7 +169,7 @@ body {
     align-items: flex-start;
     overflow: hidden;
     padding-top: 130px;
-    background-color: #616060;
+    background-color: #020D0E;
 }
 
 .journeys {
@@ -406,7 +407,8 @@ body {
 .footer {
     height: 256px;
     width: 100%;
-    background-color: rgb(63, 63, 63);
+    /* background-color: rgb(46, 46, 46); */
+    background-color: #ffdd92;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -430,7 +432,7 @@ body {
 }
 
 .footer-nav-bar a {
-    color: white;
+    color: black;
     text-align: center;
     font-family: Poppins;
     font-size: 16px;
@@ -443,7 +445,7 @@ body {
 }
 
 .footer-nav-bar a:hover {
-    color: #ffdd92;
+    color: red;
 }
 
 .social-media-nav {
@@ -465,7 +467,7 @@ body {
 
 .footer-note {
     align-self: stretch;
-    color: #C0C0C0;
+    color: rgb(37, 37, 37);
     text-align: center;
     font-family: Poppins;
     font-size: 12px;
