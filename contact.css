@@ -33,7 +33,6 @@ body {
 .document-icon {
     width: 30px;
     filter: invert(1) contrast(1) hue-rotate(420deg);
-    ;
 }
 
 .earth-icon:hover {
@@ -46,7 +45,7 @@ body {
 }
 
 .lamp.shrunk {
-    top: -25%;
+    top: -35%;
 }
 
 .navigation-bar ul {
@@ -145,7 +144,8 @@ body {
     }
 
     .button-get-started,
-    .earth-icon {
+    .earth-icon,
+    .lamp {
         display: none;
     }
 
