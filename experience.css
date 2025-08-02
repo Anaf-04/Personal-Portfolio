@@ -239,7 +239,7 @@ body {
 }
 
 .new-features-container-1,
-.new-features-container-2{
+.new-features-container-2 {
     display: flex;
     height: 90px;
     align-items: center;
@@ -265,14 +265,15 @@ body {
     cursor: pointer;
     align-items: flex-start;
     padding: 1%;
-    height: 360px;
+    height: 350px;
 }
+
 .new-features-container-2:hover {
     box-shadow: -10px 10px 0 black;
     cursor: pointer;
     align-items: flex-start;
     padding: 1%;
-    height: 250px;
+    height: 200px;
 }
 
 .features-description {
@@ -288,7 +289,8 @@ body {
     line-height: 120%;
 }
 
-.features-description span, .features-description a{
+.features-description span,
+.features-description a {
     color: #695833;
 }
 
@@ -305,6 +307,13 @@ body {
 .new-features-container-1:hover .internship-img,
 .new-features-container-2:hover .internship-img {
     display: block;
+}
+
+.internship-img span {
+    color: #695833;
+    display: flex;
+    justify-content: center;
+    text-decoration: dashed;
 }
 
 .news-date-text {
@@ -333,6 +342,18 @@ body {
     border: 0.698px solid #ffdd92;
 }
 
+.news-icon-2 {
+    display: flex;
+    height: 20px;
+    width: 100px;
+    padding: 1px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 34.884px;
+    border: 0.698px solid #ffdd92;
+}
+
 .news-icon-text {
     color: #ffdd92;
     text-align: center;
@@ -345,7 +366,8 @@ body {
 
 .news-texts {
     display: flex;
-    width: 100%;
+    width: 98%;
+    padding-right: 2%;
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
@@ -432,17 +454,26 @@ body {
         width: 70px;
     }
 
-    .internship-img img {
+    .new-feature-heading {
+        gap: 5px;
+    }
+
+    .news-icon-2 {
+        width: 30px;
+    }
+
+    .internship-img img,
+    .internship-img video {
         width: 130px;
     }
 
     .new-features-container-1:hover .news-date-text,
-    .new-features-container-2:hover .news-date-text{
+    .new-features-container-2:hover .news-date-text {
         padding: 10px 0 0 10px;
     }
 
     .new-features-container-1:hover .news-texts,
-    .new-features-container-2:hover .news-texts{
+    .new-features-container-2:hover .news-texts {
         padding-top: 10px;
     }
 }
