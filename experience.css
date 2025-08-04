@@ -510,6 +510,13 @@ body {
         width: 50%;
         height: 50%;
     }
+
+    .new-features-container-1:hover{
+        height: 380px;
+    }
+    .new-features-container-2:hover{
+        height: 220px;
+    }
 }
 
 @media screen and (max-width: 400px) {

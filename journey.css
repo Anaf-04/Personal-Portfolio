@@ -180,7 +180,7 @@ body {
 }
 
 .journey-text {
-    color: #020D0E;
+    color: #ffdd92;
     font-family: Poppins;
     font-size: clamp(25px, 4vw, 61px);
     font-style: normal;
@@ -264,7 +264,7 @@ body {
 }
 
 .pHealth-launch-text {
-    color: #486284;
+    color: #76684a;
     font-family: Poppins;
     font-size: 47px;
     font-style: normal;
@@ -273,7 +273,7 @@ body {
 }
 
 .pHealth-launch-description {
-    color: #8CA2C0;
+    color: wheat;
     font-family: Poppins;
     font-size: 16px;
     font-style: normal;
