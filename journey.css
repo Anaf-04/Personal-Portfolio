@@ -14,14 +14,14 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.lamp{
+.lamp {
     width: 40px;
     rotate: 180deg;
     position: absolute;
     top: -5%;
 }
 
-.lamp.shrunk{
+.lamp.shrunk {
     top: -35%;
 }
 
@@ -102,7 +102,7 @@ body {
     text-decoration: none;
 }
 
-.button-get-started:hover{
+.button-get-started:hover {
     background-color: #76684a;
 }
 
@@ -146,7 +146,7 @@ body {
 
     .button-get-started,
     .earth-icon,
-    .lamp{
+    .lamp {
         display: none;
     }
 
@@ -164,19 +164,27 @@ body {
 .journey-container {
     display: flex;
     width: 84%;
-    padding: 0% 8%;
+    padding: 130px 8%;
     flex-direction: column;
     align-items: flex-start;
     overflow: hidden;
-    padding-top: 130px;
     background-color: #020D0E;
+    position: relative;
+    /* background: url("images\\wall-2.jpg") center / cover no-repeat; */
 }
+
+.img-earth {
+    position: absolute;
+    top: 0px;
+    right: -40%;
+}
+
 
 .journeys {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 150px;
+    gap: 80px;
 }
 
 .journey-text {
@@ -186,64 +194,61 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+    position: relative;
 }
 
-.container-year-1,
-.container-year-2,
-.container-year-3,
-.container-year-4,
-.container-year-5 {
+
+
+.container-year {
     display: flex;
     align-items: flex-start;
-    align-self: center;
     width: 80%;
-    gap: 250px;
+    gap: 50px;
+    height: 250px;
+}
+
+.text-year-container {
+    width: 55%;
     opacity: 0;
     transform: translateY(100px);
     transition: transform 1s ease, opacity 0.5s ease;
 }
 
-.container-year-1.visible,
-.container-year-2.visible,
-.container-year-3.visible,
-.container-year-4.visible,
-.container-year-5.visible {
+.container-year-img-container {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.text-year-container.visible,
+.container-year-img-container.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-
-.text-year-container {
-    width: 53%;
+.journey-bulb {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
     position: relative;
-    height: 345px;
+    z-index: 1;
 }
 
-.text-year-container svg {
-    position: absolute;
-    left: 170px;
-    top: 78px;
-
-}
-
-.layoutimg2025-2,
-.layoutimg2022-2,
-.layoutimg2021-2,
-.layoutimg2019-2,
-.layoutimg2015-2 {
-    display: none;
+.twined-wires {
+    filter: brightness(0%);
+    padding-left: 5px;
+    margin: -45px 0;
 }
 
 .text-year {
     color: #E6E6E6;
     font-family: Poppins;
-    font-size: 180px;
+    font-size: clamp(25px, 4vw, 61px);
     font-style: normal;
     font-weight: 700;
-    line-height: 179.277px;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .pHealth-launch-container {
@@ -251,10 +256,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    position: absolute;
-    left: 170px;
-    top: 160px;
-    width: 100%;
 }
 
 .pHealth-launch-text-container {
@@ -266,7 +267,7 @@ body {
 .pHealth-launch-text {
     color: #76684a;
     font-family: Poppins;
-    font-size: 47px;
+    font-size: clamp(23px, 4vw, 47px);
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
@@ -279,7 +280,6 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    width: 430px;
 }
 
 .pHealth-launch-description ul {
@@ -287,122 +287,86 @@ body {
     margin: 0;
 }
 
-@media screen and (max-width: 1450px) {
-
-    .container-year-1,
-    .container-year-2,
-    .container-year-3,
-    .container-year-4,
-    .container-year-5 {
-        align-self: flex-start;
-        width: 100%;
-        gap: 10%;
-    }
+#img2025 {
+    width: 200px;
 }
 
-@media screen and (max-width: 1200px) {
-    .pHealth-launch-container {
-        left: 0;
-    }
-}
-
-@media screen and (max-width: 950px) {
-    .journeys {
-        gap: 30px;
-    }
-
-    .container-year-1,
-    .container-year-3,
-    .container-year-5 {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .container-year-2,
-    .container-year-4 {
-        flex-direction: column-reverse;
-        gap: 20px;
-    }
-
-    .text-year {
-        font-size: 100px;
-        line-height: 100px;
-    }
-
-    .layoutimg2025-2,
-    .layoutimg2022-2,
-    .layoutimg2021-2,
-    .layoutimg2019-2,
-    .layoutimg2015-2 {
-        display: block;
-    }
-
-    .layoutimg2025-1,
-    .layoutimg2022-1,
-    .layoutimg2021-1,
-    .layoutimg2019-1,
-    .layoutimg2015-1 {
-        display: none;
-    }
-
-    .text-year-container svg {
-        top: 41px;
-        left: 86px;
-    }
-
-    .text-year-container {
-        width: 100%;
-    }
-
-    .pHealth-launch-container {
-        top: 100px;
-    }
-
-    #img2025,
-    #img2022,
-    #img2021,
-    #img2019,
-    #img2015 {
-        border-radius: 20px;
-        width: 100%;
-    }
-
-    .pHealth-launch-text {
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+@media screen and (max-width: 1070px) {
+    #img2025 {
+        width: 180px;
     }
 
     .pHealth-launch-description {
-        font-size: 11px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 0.341px;
-        width: auto;
+        font-size: 13px;
     }
 
-    .container-year-1>.text-year-container {
-        height: 250px;
+    .container-year {
+        gap: 20px;
     }
 
-    .container-year-2>.text-year-container {
-        height: 285px;
+    .img-earth {
+        right: -80%;
     }
 
-    .container-year-3>.text-year-container {
-        height: 220px;
-    }
-
-    .container-year-4>.text-year-container {
-        height: 200px;
-    }
-
-    .container-year-5>.text-year-container {
-        height: 185px;
+    .journey-bulb img {
+        width: 30px;
     }
 }
+
+@media screen and (max-width: 750px) {
+    .container-year {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .text-year-container {
+        width: 130px;
+    }
+
+    .text-year {
+        width: 200px;
+    }
+
+    .pHealth-launch-text {
+        width: 350px;
+    }
+
+    #img2025 {
+        padding: 80px 0 0 10px;
+        clip-path: polygon(0 0,
+                /* Top-left corner */
+                20% 0,
+                /* Cut off triangle */
+                0 20%,
+                /* Cut off triangle */
+                40% 100%,
+                /* Bottom-left corner */
+                100% 100%,
+                /* Bottom-right corner */
+                100% 20%,
+                /* Cut off triangle */
+                80% 0,
+                /* Cut off triangle */
+                100% 0
+                /* Top-right corner */
+            );
+    }
+
+    .container-year {
+        gap: 10px;
+    }
+
+    .journey-container {
+        padding-left: 0;
+        width: 92%;
+    }
+
+    .journey-text {
+        padding-left: 8%;
+    }
+}
+
 
 .footer {
     height: 256px;
@@ -458,10 +422,11 @@ body {
     fill: #31BACE;
 }
 
-.whatsapp-logo:hover svg path{
+.whatsapp-logo:hover svg path {
     fill: rgb(116, 217, 116);
 }
-.linkedin-logo:hover svg path{
+
+.linkedin-logo:hover svg path {
     fill: rgb(0, 86, 216)
 }
 
