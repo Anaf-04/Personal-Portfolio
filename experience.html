@@ -25,13 +25,10 @@
                 <li><a href="experience.html"> <img src="images\light-bulb.png" alt="lamp" class="lamp">Experience</a>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
-                <div class="earth-icon">
-                    <img src="images\earth.gif" alt="lang" class="document-icon">
-                </div>
-                <a class="button-get-started" href="contact.html">
-                    <div class="button-get-started-text">Get in touch</div>
-                </a>
             </ul>
+            <div class="earth-icon">
+                <div style="display: none;">ENG</div> <img src="images\earth.gif" alt="lang" class="document-icon">
+            </div>
         </nav>
     </div>
 
@@ -113,7 +110,7 @@
                     <div class="new-features-container-2">
                         <div class="news-date-text">
                             <div class="news-icon">
-                                <div class="news-icon-text">May 02, 2025 - Now</div>
+                                <div class="news-icon-text">May 02, 2025 - Sept 30, 2025</div>
                             </div>
                             <div class="internship-img"><img src="images\gallery-img-2.jpg" alt="ppc" width="180px"
                                     style="border-radius: 20px;"></div>
@@ -142,7 +139,7 @@
                     <div class="new-features-container-2">
                         <div class="news-date-text">
                             <div class="news-icon">
-                                <div class="news-icon-text">June 9, 2024 - Jun 20, 2024</div>
+                                <div class="news-icon-text">Jun 9, 2024 - Jun 20, 2024</div>
                             </div>
                             <div class="internship-img"><a
                                     href="https://next.frame.io/share/81f93ac8-41a2-418a-80d2-8f85a11b5f09/reel/6c048467-9fde-40c7-85fb-57920583a325"
@@ -254,11 +251,11 @@
                     <div class="new-features-container-1">
                         <div class="news-date-text">
                             <div class="news-icon">
-                                <div class="news-icon-text">June 3, 2024 - Aug 23, 2024</div>
+                                <div class="news-icon-text">Jun 3, 2024 - Aug 23, 2024</div>
                             </div>
-                            <div class="internship-img"><img src="images\dalantia-img-1.jpg" alt="ppc" width="180px"
-                                    style="border-radius: 20px;"></div>
-                            <div class="internship-img"><img id="dalantia-img-2" src="images\ias.png"
+                            <!-- <div class="internship-img"><img src="images\dalantia-img-1.jpg" alt="ppc" width="180px"
+                                    style="border-radius: 20px;"></div> -->
+                            <div class="internship-img"><img id="dalantia-img-2" src="images\dalantia-img-2.jpg"
                                     alt="ppc" width="180px" style="border-radius: 20px;"></div>
                         </div>
                         <div class="news-texts">
@@ -269,7 +266,7 @@
                                     <div class="news-icon-text">Internship</div>
                                 </div>
                             </div>
-                            <div class="features-description">Achieved certification of completion in Industrial 
+                            <div class="features-description">Achieved certification of completion in Industrial
                                 Attachment Scheme 2024 arranged by CityU.
                                 <br><br>
                                 <ul style="margin: 0; padding: 0 0 0 15px;">
@@ -489,5 +486,11 @@
         document.querySelectorAll('.new-features-container-1,.new-features-container-2 ,.slide-1, .slide-2, .slide-3').forEach(el => {
             observer.observe(el);
         });
+    });
+
+    window.addEventListener('load', function () {
+        if (window.location.hash === '#dalantia') {
+            window.scrollBy({ top: 550, left: 0, behavior: 'smooth' });
+        }
     });
 </script>
