@@ -538,6 +538,12 @@ body {
         left: 6%;
     }
 
+    #div-to-move-right-2 {
+        position: absolute;
+        left: 6%;
+        margin-top: 5%;
+    }
+
     .new-features-container-1:hover .news-date-text,
     .new-features-container-2:hover .news-date-text {
         padding: 10px 0 0 10px;
@@ -591,6 +597,10 @@ body {
     }
     .new-features-container-2:hover{
         height: 220px;
+    }
+
+    #petpetclub-heading, #dalantia-heading {
+        font-size: 10px;
     }
 }
 
