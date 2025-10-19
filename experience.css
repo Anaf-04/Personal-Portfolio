@@ -320,7 +320,7 @@ body {
     cursor: pointer;
     align-items: flex-start;
     padding: 1%;
-    height: 350px;
+    height: 400px;
 }
 
 .new-features-container-2:hover {
@@ -472,6 +472,9 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+    .new-features-container-1:hover .features-description {
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -483,6 +486,10 @@ body {
     .heading-texts {
         font-size: 20px;
         font-weight: 600;
+    }
+
+    .new-features-container-1:hover .features-description {
+        font-size: 10px;
     }
 }
 
@@ -522,6 +529,15 @@ body {
         width: 130px;
     }
 
+    #internship-img-1 img {
+        display: none;
+    }
+
+    #div-to-move-right {
+        position: absolute;
+        left: 6%;
+    }
+
     .new-features-container-1:hover .news-date-text,
     .new-features-container-2:hover .news-date-text {
         padding: 10px 0 0 10px;
@@ -547,6 +563,10 @@ body {
         font-size: 8px;
     }
 
+    .new-features-container-1:hover .features-description {
+        font-size: 8px;
+    }
+
     .time {
         display: none;
     }
@@ -567,7 +587,7 @@ body {
     }
 
     .new-features-container-1:hover{
-        height: 380px;
+        height: 400px;
     }
     .new-features-container-2:hover{
         height: 220px;
